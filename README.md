@@ -1,6 +1,8 @@
-# Social Network Website HIT DataBase Lab3
+# Social Network Website 
 
-A simple social network website on 144.34.176.234/sn/login.html with functions:
+## HIT DataBase Lab3
+
+### A simple social network website on <144.34.176.234/sn/login.html> with functions:
 
 * Register
 * Login
