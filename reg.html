@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <script type="text/javascript">
+        function validate()
+        {
+            var email = document.getElementById("email").value;
+            var pw1 =document.getElementById("pw1").value;
+            var pw2 =document.getElementById("pw2").value;
+            //alert("AAAAAA");
+            if((/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/).test(email) == false)
+            {
+                alert("wrong email address");
+                return false;
+                }
+                
+            
+            if(pw1.length < 1)
+            {
+                alert("empty password");
+                return false;
+                }
+            
+            if(pw2.length < 1)
+            {
+                alert("Please enter the password again");
+                return false;
+                }
+            
+            if(pw1 != pw2)
+            {
+                alert("Passwords must match");
+                return false;
+                }
+            alert("All is Ok");
+
+            return true;
+        }
+        </script>
+    </head>
+    <body>
+    <h1>Regist~</h1>
+
+    <form name="reg"  method = "post">
+        <table>
+        
+        <tr>
+        <td style="text-align:right">E-mail:</td>
+        <td style="text-align:center"><input type="text" name="email" id="email" size="20"><br /></td>
+        </tr>
+        
+        <tr>
+        <td style="text-align:right">Password:</td>
+        <td style="text-align:center"><input type="text" name="password" id="pw1" size="20"><br /></td>
+        </tr>
+        
+        <tr>
+        <td style="text-align:right">Re-enter password:</td>
+        <td style="text-align:center"><input type="text" name="password2" id="pw2" size="20"><br /></td>
+        </tr>
+        
+        </table>
+        <input type="submit"  value="Regist" name="Submit" onclick="return validate()" formaction="register.php"> <input type="button" name="check" value="check the input" onclick="return validate()"> 
+        </form>
+        <br><br>
+        <input type="submit" value="Login" formaction="login.html">
+  
+    </body>
+
+
+</html>
+

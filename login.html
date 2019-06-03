@@ -1,0 +1,45 @@
+<html>
+<head>
+<script type="text/javascript">
+function check()
+{
+    var email = document.getElementById("email").value;
+    var pw =document.getElementById("pw").value;
+    if((/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/).test(email) == false)
+    {
+        alert("invaild email address");
+        return false;
+    }
+    if(pw.length < 1)
+    {
+        alert("Please input the password");
+        return false;
+       }
+    return true;
+    }
+</script>
+</head>
+        <body>
+        <h1>Lab3 Social Network Login </h1>
+        <h3>from 1161140118</h3>
+        <form name="login" action="login.php" onsubmit="return check()" method = "post">
+
+            <table>
+                <tr>
+                    <td>Email: </td>
+                    <td><input type="text" name="email" id="email" size="20"><br /></td>
+                </tr>
+                <tr>
+                    <td>Password: </td>
+                    <td><input type="password" name="password" id="pw" size="20"><br /></td>
+            </table>
+            <input type="submit" value="Submit">
+        </form>
+
+        <input type="button" onclick='window.location.href="reg.html"' value="Register"></button>
+
+
+
+        </body>
+
+</html>
